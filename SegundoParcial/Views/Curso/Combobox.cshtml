@@ -1,0 +1,16 @@
+﻿@model SegundoParcial.Models.Erollements
+@{
+    ViewBag.Title = "Combobox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Combobox</h2>
+
+@using (Html.BeginForm("getcombo", "Curso", FormMethod.Post))
+{
+    @Html.DropDownListFor(a => a.StudentID, new SelectList(ViewBag.listofstudentcombobox, "value", "Text"), "selecciona un estudiante", new { @class = "form-control" })
+    @Html.DropDownListFor(a => a.CourseID, new SelectList(ViewBag.listofcoursescombobox, "value", "Text"), "selecciona un course", new { @class = "form-control" })
+    <br>
+    <input type="submit" />
+    <br />
+}

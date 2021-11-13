@@ -1,0 +1,24 @@
+﻿@model SegundoParcial.Models.Courses
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ServicioDelete</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ServicioDelete", "Curso", FormMethod.Post))
+        {
+            <label>Ingresa ID a eliminar</label>
+            @Html.TextBoxFor(c => c.CouserId)
+            <br />
+            <button>Eliminar</button>
+        }
+
+    </div>
+</body>
+</html>

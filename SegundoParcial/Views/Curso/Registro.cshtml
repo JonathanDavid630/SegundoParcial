@@ -1,0 +1,17 @@
+﻿@model SegundoParcial.Models.Courses
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registro</h2>
+@using (Html.BeginForm("Registro","Curso",FormMethod.Post))
+{
+    <label>TITULO</label>
+    @Html.TextBoxFor(a => a.Title)
+    <br />
+    <label>CREDITOS</label>
+    @Html.TextBoxFor(a => a.Credits)
+    <input type="submit"/>
+    <br />
+}

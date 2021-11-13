@@ -1,0 +1,56 @@
+﻿@model  List<SegundoParcial.Models.Students>
+@{
+    ViewBag.Title = "Registros";
+}
+
+<h2>Registros</h2>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+
+    <div class="row">
+        <div class="container">
+            <div class="animate__animated animate__fadeInDown">
+                <table class="table table-hover" id="tabladeregistros">
+                    <thead>
+                    <th>
+                        IdPersona
+                    </th>
+                    <th>
+                        segundo nombre
+                    </th>
+                    <th>
+                        primer nombre
+                    </th>
+                    <th>
+                        fecha
+                    </th>
+
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.StudentId</td>
+                                <td>@item.LastName </td>
+                                <td>@item.FirstMidName </td>
+                                <td>@item.EnrrollmentsDate </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
